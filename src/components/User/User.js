@@ -1,0 +1,37 @@
+import React from 'react'
+import css from "./User.module.css";
+import { Trash2 } from 'react-feather';
+
+
+function User({pic,name,email}) {
+  return (
+    <div className={css["profile_wrapper"]}>
+    <div className={css["profile-name-title"]}>
+      <div className={css["profile-container"]}>
+        <div className={css["profile-image"]}><img alt='No img preview available' className={css['img-styling']} height={70} width={70} src={pic}/></div>
+        <div className={css["profile-name"]}>{name}</div>
+        <div className={css["profile-email"]}>{email}</div>
+      </div>
+    </div>
+    <div className={css["profile-name-status"]}>
+      <select
+        className={`${css['custom_style']} form-select form-select-sm`}
+        aria-label=".form-select-sm example"
+      >
+        <option defaultValue value="1">Inactive</option>
+        <option value="2">Active</option>
+      </select>
+    </div>
+    <div className={css["profile-name-access"]}><select
+        className={`${css['custom_style']} form-select form-select-sm`}
+        aria-label=".form-select-sm example"
+      >
+        <option defaultValue value="1">Manager</option>
+        <option value="2">Something else</option>
+      </select></div>
+    <div className={css["profile-name-remove"]}><Trash2 style={{cursor:"pointer"}} color="#c3c3c3" /></div>
+  </div>
+  )
+}
+
+export default User
