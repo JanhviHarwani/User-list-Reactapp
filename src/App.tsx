@@ -1,6 +1,6 @@
-import React from "react";
 import UserlistCard from "./components/UI/UserlistCard";
 import css from "./App.module.css";
+import DetailsCard from './components/User/DetailsCard'
 const DUMMY_DATA = [
   {
     id:1,
@@ -57,10 +57,12 @@ const DUMMY_DATA = [
     email: "teresa.delgado@example.com",
   }
 ];
+
 function App() {
   return (
     <div className={css["container"]}>
       <UserlistCard dummyData={DUMMY_DATA} />
+      <DetailsCard />
     </div>
   );
 }

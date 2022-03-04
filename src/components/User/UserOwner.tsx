@@ -7,7 +7,7 @@ function UserOwner() {
     <div className={css["profile_wrapper"]}>
     <div className={css["profile-name-title"]}>
       <div className={css["profile-container"]}>
-        <div className={css["profile-image"]}><img className={css['img-styling']} height={70} width={70} alt="no preview available" src="https://randomuser.me/api/portraits/med/women/65.jpg" /></div>
+        <div className={css["profile-image"]}><img className={css['img-styling']} height={50} width={50} alt="no preview available" src="https://randomuser.me/api/portraits/med/women/65.jpg" /></div>
         <div className={css["profile-name"]}>Leon Hunt</div>
         <div className={css["profile-email"]}>leonhunt@xyz.com</div>
       </div>
