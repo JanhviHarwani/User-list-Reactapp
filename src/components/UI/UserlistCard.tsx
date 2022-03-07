@@ -7,13 +7,14 @@ import css from "./UserlistCard.module.css";
 
 interface dummyDataProps {
   dummyData: { id: number; pic: string; name: string; email: string }[];
+  currHoveredState:(state:boolean)=>void
 }
 
-const UserlistCard = ({ dummyData }: dummyDataProps) => {
+const UserlistCard = ({ dummyData,currHoveredState }: dummyDataProps) => {
   const [hoverState,setHoverState]=useState(false)
   const hoverHandler=(hoveredState:boolean)=>{
     setHoverState(hoveredState)
-    console.log("hovered,state")
+    currHoveredState(hoverState)
   }
   return (
     <div className={css["user_list_card"]}>
@@ -21,8 +22,10 @@ const UserlistCard = ({ dummyData }: dummyDataProps) => {
       <UserOwner />
 
       {dummyData.map((obj) => (
-        <User hovered={hoverHandler} key={obj.id} pic={obj.pic} name={obj.name} email={obj.email} />
+        <User hovered={hoverHandler} id={obj.id} key={obj.id} pic={obj.pic} name={obj.name} email={obj.email} />
+        
       ))}
+      
     </div>
   );
 };

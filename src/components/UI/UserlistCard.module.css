@@ -1,9 +1,9 @@
 .user_list_card {
-  flex:8;
+  /* flex:8; */
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   
-  width:200vh;
+  /* width:200vh; */
   font-size: 13px;
   background-color: white;
   grid-gap: 30px;
