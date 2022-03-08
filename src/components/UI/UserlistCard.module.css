@@ -1,37 +1,39 @@
 .user_list_card {
-  /* flex:8; */
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  
-  /* width:200vh; */
+  height: 700px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   font-size: 13px;
   background-color: white;
   grid-gap: 30px;
-  /* box-shadow: 4px 4px #c3c3c31a; */
-  /* box-shadow: 5px 5px 10px -1px rgb(0 0 0 / 15%); */
-  box-shadow: 4px 4px -1px -2px #c3c3c31a;
+  border-radius: 20px;
+  box-shadow: 4px 4px #c3c3c31a;
   padding: 25px;
 }
+::-webkit-scrollbar {
+  width: 0px; 
+  background: transparent; 
+}
+
 .profile_wrapper {
   grid-row: auto;
   display: grid;
   grid-column: 1/9;
   grid-template-columns: repeat(8, 1fr);
-   
+
   font-weight: 600;
 }
 .profile-name-title {
   display: grid;
   grid-row: auto;
   grid-column: 1/4;
-   
 }
 .profile-container {
   justify-items: center;
   display: grid;
   grid-row: 1/2;
   grid-column: 1/4 !important;
-   
 }
 .profile-image {
   display: grid;
@@ -49,7 +51,6 @@
   align-items: center;
   grid-row: auto;
   grid-column: 4/6;
-   
 }
 
 .profile-name-access {
@@ -57,16 +58,14 @@
   align-items: center;
   grid-row: auto;
   grid-column: 6/8;
-   
 }
 .profile-name-remove {
   display: grid;
   align-items: center;
   grid-row: auto;
   grid-column: 8/9;
-   
 }
 .custom_style {
-    background-color: #e9ecef !important;
-    width: 80% !important;
+  background-color: #e9ecef !important;
+  width: 80% !important;
 }

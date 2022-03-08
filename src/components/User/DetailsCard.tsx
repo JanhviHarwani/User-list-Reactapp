@@ -1,27 +1,28 @@
 import css from "./DetailsCard.module.css";
-// interface dummyDataProps {
-//   data: { id: number; pic: string; name: string; email: string }[];
-//   currHoveredState?: (state: boolean) => void;
-// }
-function DetailsCard({ id }: any) {
+interface dummyDataProps {
+  hoveredUserProfile: { id: number; pic: string; name: string; email: string }[];
+  // hoveredUserProfile: any;
+  
+}
+function DetailsCard({ hoveredUserProfile:[pic:string]}: dummyDataProps) {
   return (
-    <div className={css["card"]} id={id}>
+    <div className={css["card"]}>
       <img
         className={css["profile_img"]}
-        src="https://randomuser.me/api/portraits/med/women/75.jpg"
+        src={hoveredUserProfile.pic}
         alt="no preivew available"
         height={85}
         width={90}
       />
-      <div className={css["profile_name"]}>Leon Hunt</div>
-      <div className={css["profile_email"]}>something@xyz.com</div>
+      <div className={css["profile_name"]}>{hoveredUserProfile.name}</div>
+      <div className={css["profile_email"]}>{hoveredUserProfile.email}</div>
       <div className={css["profile_plan"]}>Your Plan:Standard</div>
       <div className={css["profile_status"]}>
         <button
           type="button"
           className={`btn btn-warning ${css["custom_btn_class"]}`}
         >
-          Active User
+          {hoveredUserProfile.status} User
         </button>
       </div>
       <div className={css["plan_uses_container"]}>
@@ -33,9 +34,6 @@ function DetailsCard({ id }: any) {
                 className={`progress-bar ${css["cutom_progress_class"]}`}
                 role="progressbar"
                 style={{ width: "75%" }}
-                // aria-valuenow="25"
-                // aria-valuemin="0"
-                // aria-valuemax="100"
               ></div>
             </div>
           </div>

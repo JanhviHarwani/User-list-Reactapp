@@ -3,9 +3,7 @@
     display: grid;
     grid-column: 1/9;
     grid-template-columns: repeat(9, 1fr);
-   
-    
-    
+
   }
   .profile-name-title {
     display: grid;
