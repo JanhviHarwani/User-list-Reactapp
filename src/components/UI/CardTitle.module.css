@@ -1,20 +1,19 @@
 .card_title {
-    grid-column: 1/9;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    
-    font-weight: 800;
-  }
-  .user-name-title {
-    display: grid;
-    grid-row: auto;
-    grid-column: 1/5;
-  }
-  .user-status-title {
-    grid-row: 1;
-    grid-column: 5/7;
-  }
-  .user-access-title {
-    grid-row: 1;
-    grid-column: 7/9; 
-  }
+  grid-column: 1/9;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  font-weight: 800;
+}
+.user-name-title {
+  display: grid;
+  grid-row: auto;
+  grid-column: 1/5;
+}
+.user-status-title {
+  grid-row: 1;
+  grid-column: 5/7;
+}
+.user-access-title {
+  grid-row: 1;
+  grid-column: 7/9;
+}

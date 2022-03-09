@@ -1,28 +1,33 @@
 import css from "./DetailsCard.module.css";
 interface dummyDataProps {
-  hoveredUserProfile: { id: number; pic: string; name: string; email: string }[];
-  // hoveredUserProfile: any;
-  
+  hoveredUserProfile: {
+    pic: string;
+    name: string;
+    email: string;
+    status?: string;
+    access?: string;
+  } | null;
 }
-function DetailsCard({ hoveredUserProfile:[pic:string]}: dummyDataProps) {
+
+function DetailsCard({ hoveredUserProfile }: dummyDataProps) {
   return (
     <div className={css["card"]}>
       <img
         className={css["profile_img"]}
-        src={hoveredUserProfile.pic}
+        src={hoveredUserProfile!.pic}
         alt="no preivew available"
         height={85}
         width={90}
       />
-      <div className={css["profile_name"]}>{hoveredUserProfile.name}</div>
-      <div className={css["profile_email"]}>{hoveredUserProfile.email}</div>
+      <div className={css["profile_name"]}>{hoveredUserProfile!.name}</div>
+      <div className={css["profile_email"]}>{hoveredUserProfile!.email}</div>
       <div className={css["profile_plan"]}>Your Plan:Standard</div>
       <div className={css["profile_status"]}>
         <button
           type="button"
           className={`btn btn-warning ${css["custom_btn_class"]}`}
         >
-          {hoveredUserProfile.status} User
+          {hoveredUserProfile!.status} User
         </button>
       </div>
       <div className={css["plan_uses_container"]}>

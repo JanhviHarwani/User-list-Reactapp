@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import User from "../User/User";
-import UserOwner from "../User/UserOwner";
 import CardTitle from "./CardTitle";
 import css from "./UserlistCard.module.css";
-// import { v4 as uuidv4 } from "uuid";
+import UserType from "../../Interfaces/UserType";
 
 interface dummyDataProps {
-  dummyData: { id: number; pic: string; name: string; email: string }[];
+  dummyUserData: {
+    id: number;
+    pic: string;
+    name: string;
+    email: string;
+    status: string;
+  }[];
   currHoveredState: (state: boolean) => void;
-  hoveredUser: any;
-  
+  hoveredUser: (user: UserType) => void;
 }
 
 const UserlistCard = ({
-  dummyData,
+  dummyUserData,
   currHoveredState,
   hoveredUser,
 }: dummyDataProps) => {
@@ -30,18 +34,17 @@ const UserlistCard = ({
   return (
     <div className={css["user_list_card"]}>
       <CardTitle />
-      <UserOwner />
-
-      {dummyData.map((obj) => (
+      {dummyUserData.map((obj) => (
         <User
           findUser={foundUserHandler}
-          data={dummyData}
+          data={dummyUserData}
           hovered={hoverHandler}
           id={obj.id}
           key={obj.id}
           pic={obj.pic}
           name={obj.name}
           email={obj.email}
+          status={obj.status}
         />
       ))}
     </div>
