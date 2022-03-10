@@ -1,0 +1,66 @@
+.card {
+  position: relative;
+  display: grid;
+  grid-row-gap: 6px;
+  grid-row: 20px;
+  padding: 25px;
+  margin-left: 30px;
+  width: 250px;
+  box-shadow: 5px 5px 10px -5px rgb(0 0 0 / 25%);
+  border-radius: 30px;
+  background-color: white;
+  justify-items: center;
+}
+.profile_img {
+  border-radius: 50px;
+}
+.custom_btn_class {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: white !important;
+  line-height: 22.2px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #feb23e !important;
+}
+.profile_name {
+  font-size: 16px;
+  font-weight: 700;
+}
+.profile_email {
+  font-size: 14px;
+  font-weight: 500;
+  color: #898d91ce;
+}
+.profile_plan {
+  font-weight: 800;
+}
+.plan_uses_container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+.title {
+  font-size: 13px;
+  font-weight: 700;
+}
+.cutom_progress_class {
+  background-color: #feb23e !important;
+}
+.clicks_data {
+  display: flex;
+  padding-top: 8px;
+}
+.clicks_reviewed {
+  box-shadow: 1px 0px 0px 0px rgb(0 0 0 / 25%);
+}
+.clicks_data_number {
+  font-size: 20px;
+  font-weight: 900;
+}
+.clicks_title {
+  font-size: 12px;
+  color: #898d91ce;
+}
