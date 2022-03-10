@@ -1,15 +1,11 @@
 import css from "./DetailsCard.module.css";
-interface dummyDataProps {
-  hoveredUserProfile: {
-    pic: string;
-    name: string;
-    email: string;
-    status?: string;
-    access?: string;
-  };
+import UserType from "../../Interfaces/UserType";
+
+interface ProfileType {
+  hoveredUserProfile: UserType;
 }
 
-function DetailsCard({ hoveredUserProfile }: dummyDataProps) {
+function DetailsCard({ hoveredUserProfile }: ProfileType) {
   return (
     <div className={css["card"]}>
       <img
