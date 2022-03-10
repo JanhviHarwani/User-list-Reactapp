@@ -8,10 +8,7 @@ import { USERS } from "./dummyData/USER";
 function App() {
   const [hoveredState, setHoveredState] = useState(false);
   const [foundUser, setFoundUser] = useState<UserType | null>(null);
-  const hoverStateHandler = (state: boolean) => {
-    setHoveredState(state);
-  };
-  const foundUserHandler = (gotUser: any) => {
+  const foundUserHandler = (gotUser: UserType) => {
     const hoveredUser = gotUser;
     setFoundUser(hoveredUser);
   };
@@ -19,11 +16,13 @@ function App() {
   return (
     <div className={css["container"]}>
       <UserlistCard
+        setHoveredState={setHoveredState}
         hoveredUser={foundUserHandler}
-        currHoveredState={hoverStateHandler}
         dummyUserData={USERS}
       />
-      {hoveredState && <DetailsCard hoveredUserProfile={foundUser} />}
+      {foundUser && hoveredState ? (
+        <DetailsCard hoveredUserProfile={foundUser} />
+      ) : null}
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import User from "../User/User";
 import CardTitle from "./CardTitle";
 import css from "./UserlistCard.module.css";
@@ -12,21 +11,17 @@ interface dummyDataProps {
     email: string;
     status: string;
   }[];
-  currHoveredState: (state: boolean) => void;
+
   hoveredUser: (user: UserType) => void;
+  setHoveredState:(hover: boolean) => void;
 }
 
 const UserlistCard = ({
   dummyUserData,
-  currHoveredState,
+  setHoveredState,
   hoveredUser,
 }: dummyDataProps) => {
-  const [hoverState, setHoverState] = useState(false);
-  const hoverHandler = (hoveredState: boolean) => {
-    setHoverState(hoveredState);
-    currHoveredState(hoverState);
-  };
-  const foundUserHandler = (foundUser: any) => {
+  const foundUserHandler = (foundUser: UserType) => {
     const gotUser = foundUser;
     hoveredUser(gotUser);
   };
@@ -37,14 +32,9 @@ const UserlistCard = ({
       {dummyUserData.map((obj) => (
         <User
           findUser={foundUserHandler}
-          data={dummyUserData}
-          hovered={hoverHandler}
-          id={obj.id}
+          setHoveredState={setHoveredState}
           key={obj.id}
-          pic={obj.pic}
-          name={obj.name}
-          email={obj.email}
-          status={obj.status}
+          user={obj}
         />
       ))}
     </div>
