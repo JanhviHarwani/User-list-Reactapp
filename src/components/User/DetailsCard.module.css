@@ -5,7 +5,8 @@
   grid-row: 20px;
   padding: 25px;
   margin-left: 30px;
-  width: 250px;
+  width: 280px;
+  height: 400px;
   box-shadow: 5px 5px 10px -5px rgb(0 0 0 / 25%);
   border-radius: 30px;
   background-color: white;
@@ -21,16 +22,16 @@
   padding-bottom: 7px;
   color: white !important;
   line-height: 22.2px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   background-color: #feb23e !important;
 }
 .profile_name {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
 }
 .profile_email {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #898d91ce;
 }
@@ -43,7 +44,7 @@
   padding-top: 15px;
 }
 .title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
 }
 .cutom_progress_class {
@@ -57,10 +58,10 @@
   box-shadow: 1px 0px 0px 0px rgb(0 0 0 / 25%);
 }
 .clicks_data_number {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 900;
 }
 .clicks_title {
-  font-size: 12px;
+  font-size: 14px;
   color: #898d91ce;
 }

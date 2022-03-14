@@ -1,15 +1,16 @@
 .user_list_card {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  height: 700px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  font-size: 13px;
+  /* height: 700px; */
+  /* overflow-y: scroll; */
+  /* overflow-x: hidden; */
+  font-size: 15px;
   background-color: white;
   grid-gap: 30px;
   border-radius: 20px;
   box-shadow: 4px 4px #c3c3c31a;
   padding: 25px;
+  width: 700px;
 }
 ::-webkit-scrollbar {
   width: 0px;
