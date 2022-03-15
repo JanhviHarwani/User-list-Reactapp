@@ -40,17 +40,19 @@ function User({ findUser, setHoveredState, user }: Props) {
               className={css["img-styling"]}
               height={50}
               width={50}
-              src={user.pic}
+              src={user.avatar}
             />
           </div>
-          <div className={css["profile-name"]}>{user.name}</div>
+          <div className={css["profile-name"]}>
+            {user.first_name} {user.last_name}
+          </div>
           <div className={css["profile-email"]}>{user.email}</div>
         </div>
       </div>
-      {user.id === 0 ? (
+      {user.id === 1 ? (
         <>
           {" "}
-          <div className={css["profile-name-status-owner"]}>{user.status}</div>
+          <div className={css["profile-name-status-owner"]}>Active</div>
           <div className={css["profile-name-access-owner"]}>Owner</div>
           <div className={css["profile-name-remove"]}>
             <Lock style={{ cursor: "pointer" }} color="#c3c3c3" />
