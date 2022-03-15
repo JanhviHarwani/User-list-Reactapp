@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   font-weight: 800;
+  font-size: 17px;
 }
 .user-name-title {
   display: grid;
