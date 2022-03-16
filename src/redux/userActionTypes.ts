@@ -6,18 +6,18 @@ export enum ActionType {
   FETCH_USER_SUCCESS = "FETCH_USER_SUCCESS",
 }
 
-interface actionPending {
+interface ActionPending {
   type: ActionType.FETCH_USER_REQ;
 }
 
-interface actionSuccess {
+interface ActionSuccess {
   type: ActionType.FETCH_USER_SUCCESS;
   payload: UserType[];
 }
 
-interface actionFail {
+interface ActionFail {
   type: ActionType.FETCH_USER_FAILURE;
   payload: string;
 }
 
-export type Action = actionPending | actionSuccess | actionFail;
+export type Action = ActionPending | ActionSuccess | ActionFail;

@@ -6,6 +6,7 @@ interface Props {
   user: UserType;
   findUser: (user: UserType) => void;
   setHoveredState: (hover: boolean) => void;
+  
 }
 
 function User({ findUser, setHoveredState, user }: Props) {

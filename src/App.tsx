@@ -23,12 +23,14 @@ function App() {
     dispatch(fetchUser(currentPage));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]);
+
   if (userData.isLoading) {
     return <h2>Loading...</h2>;
   }
   return (
     <div className={css["container"]}>
       <UserlistCard
+        currentpage={currentPage}
         setHoveredState={setHoveredState}
         hoveredUser={foundUserHandler}
         setCurrentPage={setCurrentPage}

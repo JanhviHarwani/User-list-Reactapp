@@ -1,5 +1,5 @@
 export default interface UserType {
-  user: UserType[];
+
   id: number;
   avatar: string;
   first_name: string;
@@ -7,4 +7,7 @@ export default interface UserType {
   email: string;
   status?: string;
   access?: string;
+}
+export interface User{
+  user:UserType[];
 }

@@ -1,7 +1,7 @@
 import UserType from "../Interfaces/UserType";
 import { Action, ActionType } from "./userActionTypes";
 
-interface UserState {
+export interface UserState {
   user: UserType[];
   error: string | null;
   isLoading: Boolean;

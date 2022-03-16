@@ -1,3 +1,9 @@
 .pagination-width {
   width: 95px !important;
 }
+/* .page-link:active {
+  background-color: #e9ecef !important;
+} */
+.page-link-active {
+  background-color: #e9ecef !important;
+}
