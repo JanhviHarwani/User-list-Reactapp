@@ -10,12 +10,14 @@ function DetailsCard({ hoveredUserProfile }: ProfileType) {
     <div className={css["card"]}>
       <img
         className={css["profile_img"]}
-        src={hoveredUserProfile.pic}
+        src={hoveredUserProfile.avatar}
         alt="no preivew available"
         height={85}
         width={90}
       />
-      <div className={css["profile_name"]}>{hoveredUserProfile.name}</div>
+      <div className={css["profile_name"]}>
+        {hoveredUserProfile.first_name} {hoveredUserProfile.last_name}
+      </div>
       <div className={css["profile_email"]}>{hoveredUserProfile.email}</div>
       <div className={css["profile_plan"]}>Your Plan:Standard</div>
       <div className={css["profile_status"]}>
@@ -23,7 +25,7 @@ function DetailsCard({ hoveredUserProfile }: ProfileType) {
           type="button"
           className={`btn btn-warning ${css["custom_btn_class"]}`}
         >
-          {hoveredUserProfile.status} User
+          Inactive User
         </button>
       </div>
       <div className={css["plan_uses_container"]}>
