@@ -8,7 +8,7 @@ export function fetchUser(currentPage: number) {
       type: ActionType.FETCH_USER_REQ,
     });
     axios
-      .get(`https://reqres.in/api/users?page=${currentPage}`)
+      .get(`${process.env.REACT_APP_API_ENDPOINT}?page=${currentPage}`)
       .then((response) => {
         const user = response.data.data;
         dispatch({
